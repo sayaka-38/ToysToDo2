@@ -4,7 +4,7 @@
       = image_tag 'logo_transparent.png', :size =>'87x59', class: "header__menu__img", alt: 'ToysToDo'
       .header__menu__list
         %li.header__menu__list__li
-        = link_to "#", class: "header__menu__list__li__link" do
+        = link_to edit_user_path(current_user), class: "header__menu__list__li__link" do
           - current_user.name
         %li.header__menu__list__li
         = link_to destroy_user_session_path, class: "header__menu__list__li__link", method: :delete do

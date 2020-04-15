@@ -1,13 +1,13 @@
 !!!
 %html
   %head
+    %link{:href => "https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap", :rel => "stylesheet"}/
     %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
     %title ToysToDo2
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
   %body
-    = render 'partial/header'
-    -# if current_user
+    = render 'partial/header' if current_user
     = yield
