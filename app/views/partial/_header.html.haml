@@ -1,0 +1,12 @@
+.header
+  .header__menu
+    =  link_to root_path do
+      = image_tag 'logo_transparent.png', :size =>'87x59', class: "header__menu__img", alt: 'ToysToDo'
+      .header__menu__list
+        %li.header__menu__list__li
+        = link_to "#", class: "header__menu__list__li__link" do
+          username
+        %li.header__menu__list__li
+        -# = link_to destroy_user_session_path, class: "header__menu__list__li__link", method: :delete do
+        = link_to "#", class: "header__menu__list__li__link" do
+          %i.fas.fa-sign-out-alt
