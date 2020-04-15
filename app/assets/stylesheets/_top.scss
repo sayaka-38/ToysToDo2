@@ -6,20 +6,24 @@
     height: 65px;
     display: flex;
     line-height: 65px;
-    justify-content: space-between;
-    &__img{
-    padding: 5px 0 0 75px;
-    }
-    &__list{
-    display: flex;
-      &__li{
-      list-style: none;
-        &__link{
-        padding: 0 20px 0 0;
-        color: #fff;
-        text-decoration: none;
+    &__left{
+      width: 250px;
+      background-color: #000;
+      &__a{
+        text-align: center;
+        &__img{
+          padding: 5px 0 0 0;
         }
       }
     }
+    &__right{
+      width: calc( 100% - 250px );
+      display: flex;
+      justify-content: flex-end;
+      &__li{
+      padding: 0 20px 0 0;
+      color: #fff;
+      }
+    }    
   }
 }
