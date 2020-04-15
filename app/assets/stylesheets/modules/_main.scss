@@ -12,35 +12,45 @@ $main-width: 250px;
   background-color: #dc2525;
   &__user{
     height: 80px;
-    margin: 40px 20px 20px 20px;
+    margin: 40px 20px 30px 20px;
     display: flex;
     justify-content: center;
     &__img{
-      margin: 0 30px 0 0;
+      margin: 0 20px 0 0;
+      width: 80px;
+      height: 80px;
+      border-radius: 100px;
+      overflow: hidden;
     }
     &__name{
+      width: calc( 100% - 100px );
       &__n{
-        font-size: small;
-        margin: 20px 0 0 0;
+        margin: 25px 0 0 0;
         align-items: center;
-        color: #fff;
+        color: #fbfaf5;
       }
     }
   }
   &__profile{
-    margin: 0 20px 20px 20px;
+    margin: 0 20px 30px 20px;
     &__label{
-      margin: 0 0 5px 10px;
+      margin: 0 0 0 10px;
+      color: #fbfaf5;
+      font-weight: bold;
     }
     &__text{
-      font-size: small;
+      border-top: double 8px #dc2525;
+      border-bottom: double 8px #dc2525;
+      background-color: #fbfaf5;
+      border-radius: 5%;
+      &__content{
+        font-size: small;
+        padding: 20px 10px;
+      }
     }
   }
   &__menu{
     margin: 0 20px 20px 20px;
-    &__label{
-      margin: 0 0 5px 10px;
-    }
     &__list{
       color: #fff;
       font-size: small;
