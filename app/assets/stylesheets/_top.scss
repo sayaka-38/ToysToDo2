@@ -1,6 +1,5 @@
 .header{
   height: 65px;
-  background-color: #2e2930;
   font-family: 'M PLUS 1p', sans-serif;
   &__menu{
     height: 65px;
@@ -20,6 +19,7 @@
       width: calc( 100% - 250px );
       display: flex;
       justify-content: flex-end;
+      background-color: #2e2930;
       &__li{
       padding: 0 20px 0 0;
       color: #fff;
