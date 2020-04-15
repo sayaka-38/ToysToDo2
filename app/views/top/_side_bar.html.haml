@@ -5,11 +5,11 @@
     .side-bar__user__name
       .side-bar__user__name__n
         = current_user.name
-        = link_to edit_user_path(current_user), class: "side-bar__user__name__n" do
-          %i.fas.fa-user-edit
   .side-bar__profile
     .side-bar__profile__label
       profile
+      = link_to edit_user_path(current_user), class: "side-bar__user__name__n" do
+        %i.fas.fa-edit
     .side-bar__profile__text
       .side-bar__profile__text__content
         プロフィール８０字！プロフィール８０字！プロフィール８０字！プロフィール８０字！プロフィール８０字！プロフィール８０字！プロフィール８０字！プロフィール８０字！
