@@ -1,7 +1,7 @@
 .side-bar
   .side-bar__user
     .side-bar__user__img
-      = image_tag 'test.jpg', :size =>'80x80', class: "side-bar__user__img__i", alt: 'img'
+      = image_tag 'test.jpg', :size =>'80x80', alt: 'img'
     .side-bar__user__name
       .side-bar__user__name__n
         = current_user.name
@@ -33,11 +33,11 @@
           %i.fas.fa-angle-right
       %li.side-bar__menu__list__li
         .side-bar__menu__list__li__name
-          menu1
+          タグ編集/削除
         .side-bar__menu__list__li__img
           %i.fas.fa-angle-right
       %li.side-bar__menu__list__li
         .side-bar__menu__list__li__name
-          menu1
+          完了したツイート
         .side-bar__menu__list__li__img
           %i.fas.fa-angle-right

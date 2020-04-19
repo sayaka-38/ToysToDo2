@@ -1,4 +1,5 @@
 $main-width: 250px;
+$form-height: 100px;
 
 .wrapper{
   display: flex;
@@ -16,7 +17,7 @@ $main-width: 250px;
     display: flex;
     justify-content: center;
     &__img{
-      margin: 0 20px 0 0;
+      margin-right: 20px;
       width: 80px;
       height: 80px;
       border-radius: 100px;
@@ -25,7 +26,8 @@ $main-width: 250px;
     &__name{
       width: calc( 100% - 100px );
       &__n{
-        margin: 25px 0 0 0;
+        font-weight: bold;
+        margin-top: 25px;
         align-items: center;
         color: #fbfaf5;
       }
@@ -34,7 +36,7 @@ $main-width: 250px;
   &__profile{
     margin: 0 20px 30px 20px;
     &__label{
-      margin: 0 0 0 10px;
+      margin-left:10px;
       color: #fbfaf5;
       font-weight: bold;
     }
@@ -62,12 +64,12 @@ $main-width: 250px;
         height: 45px;
         margin: 2px 0;
         &__name{
-        margin: 0 0 0 10px;
+        margin-left:10px;
         list-style: none;
         line-height: 45px;
         }
         &__img{
-          margin: 0 10px 0 0;
+          margin-right:10px;
           line-height: 45px;
         }
       }
@@ -77,5 +79,159 @@ $main-width: 250px;
 
 .main{
   width: calc( 100% - #{$main-width} );
-  background-color: #fbfaf5;
+  background-color: #fffffc;
+  &__post{
+    height: calc( 100% - #{$form-height} );
+    &__cate{
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 10px;
+      &__li{
+        display: flex;
+        flex-wrap: wrap;
+        &__i{
+        color: #4d5aaf;
+        margin-right: 10px;
+        font-size: 15px;
+        }
+      }
+      &__edit{
+        color: #4d5aaf;
+      }
+    }
+    &__a{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      &__img{
+        &__i{
+        width: 60px;
+        height: 60px;
+        margin: 25px 30px;
+        border-radius: 100px;
+        overflow: hidden;
+        }
+      }
+      &__content{
+        background-color: #f3f3f3;
+        border-radius: 20px;
+        position: relative;
+        margin: 25px 30px 0 0;
+        padding: 10px 20px;
+        &:before{
+          content: "";
+          position: absolute;
+          border: 10px solid transparent;
+          left: -26px;
+          top: 17px;
+          border-right: 22px solid #f3f3f3;
+        }
+        &__info{
+          display: flex;
+          justify-content: space-between;
+          margin: 8px 0;
+          &__top{
+            display: flex;
+            justify-self: start;
+            &__name{
+              margin-right: 10px;
+              font-weight: bold;
+            }
+            &__time{
+              margin-top: 2px;
+              font-size: small;
+              color: #524e4d;
+              }
+            }
+          &__edit{
+            color: #888084;
+          }
+        }
+        &__text{
+          margin: 0 5px 10px 5px;
+          color: #383c3c;
+        }
+        &__category{
+          display: flex;
+          align-content: flex-start;
+          margin: 0 5px 10px 5px;
+          &__li{
+            color: #4d5aaf;
+            margin-right: 10px;
+          }
+        }
+        &__bottom{
+          display: flex;
+          justify-content: space-between;
+          margin: 0 10px;
+          &__time{
+            &--g{
+              margin-right: 10px;
+              color: #4d5aaf;
+            }
+            &--r{
+              margin-right: 10px;
+              color: #e95464;
+            }
+            &--e{
+              color: #888084;
+            }
+          }
+          &__complete{
+            height: 30px;
+            width: 60px;
+            line-height: 30px;
+            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            background-color: #D64141;
+            font-size: small;
+          }
+        }
+      } 
+    }
+  }
+  &__form{
+    background-color: #4d5aaf;
+    height: $form-height;
+    &__text{
+      padding: 10px 20px;
+      display: flex;
+      position: relative;
+      &__field{
+        height: 30px;
+        width: 100%;
+        border-radius: 10px;        
+      }
+      &__image{
+        position: absolute;
+        top:17px;
+        right: 35px;
+        color: #888084;
+        &__file{
+          display: none;
+        }
+      }
+    }
+    &__cate{
+      color: #fff;
+      padding: 0 25px;
+      font-size: small;
+      font-weight: bold;
+      &__check{}
+    }
+    &__btn{
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 20px;
+      &__b{
+        width: 60px;
+        border-radius: 7px;
+        text-align: center;
+        color: #fff;
+        background-color: #000;
+        font-size: small;
+      }
+    }
+  }
 }
