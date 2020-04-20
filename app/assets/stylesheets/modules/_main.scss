@@ -86,6 +86,7 @@ $form-height: 100px;
   background-color: #fffffc;
   &__post{
     height: calc( 100% - #{$form-height} );
+    overflow: scroll;
     &__cate{
       width: 100%;
       box-sizing: border-box;
@@ -160,6 +161,9 @@ $form-height: 100px;
         &__text{
           margin: 0 5px 10px 5px;
           color: #383c3c;
+          &__image{
+            width: 100%;
+          }
         }
         &__category{
           display: flex;
@@ -209,9 +213,11 @@ $form-height: 100px;
       display: flex;
       position: relative;
       &__field{
+        &__t{
         height: 30px;
         width: 100%;
-        border-radius: 10px;        
+        border-radius: 10px;
+        }
       }
       &__image{
         position: absolute;

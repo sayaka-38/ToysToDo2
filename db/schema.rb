@@ -15,11 +15,9 @@ ActiveRecord::Schema.define(version: 2020_04_20_073001) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
     t.string "image"
-    t.bigint "tag_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["tag_id"], name: "index_posts_on_tag_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -45,7 +43,6 @@ ActiveRecord::Schema.define(version: 2020_04_20_073001) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "posts", "tags"
   add_foreign_key "posts", "users"
   add_foreign_key "tags", "users"
 end
