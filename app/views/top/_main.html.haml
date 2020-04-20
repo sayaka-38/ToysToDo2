@@ -14,7 +14,8 @@
         .main__post__cate__li__i
           ＃読書
       .main__post__cate__edit
-        %i.fas.fa-plus-circle
+        = link_to new_tag_path, class: "main__post__cate__edit__i" do
+          %i.fas.fa-plus-circle
 
     .main__post__a
       .main__post__a__img
