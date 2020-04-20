@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+  before_action :set_tag, only: [:edit, :update, :destroy]
 
   def new
     @tag = Tag.new
@@ -10,18 +11,25 @@ class TagsController < ApplicationController
   end
 
   def edit
-    @tag = Tag.find(params[:id])
   end
 
   def update
-    tag = Tag.find(params[:id])
-    tag.update(tag_params)
+    @tag.update(tag_params)
+    redirect_to root_path
+  end
+
+  def destroy
+    @tag.destroy
     redirect_to root_path
   end
 
   private
   def tag_params
     params.require(:tag).permit(:title).merge(user_id: current_user.id)
+  end
+
+  def set_tag
+    @tag = Tag.find(params[:id])
   end
 
 end
