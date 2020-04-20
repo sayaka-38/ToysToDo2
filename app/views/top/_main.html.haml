@@ -81,16 +81,10 @@
         %i.fas.fa-image
         %input{ type:"file",class:"main__form__text__image__file"}
     .main__form__cate
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        日常
-      
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        プログラミング
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        英語
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        遊び
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        読書
+      - @tags.each do |tag|
+        %input{ type:"checkbox", class:"main__form__cate__check"}
+          %span.main__form__cate__t
+            = tag.title
+
     .main__form__btn
       %input{ type:"submit", class:"main__form__btn__b" }
