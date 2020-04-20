@@ -5,7 +5,8 @@
         - @tags.each do |tag|
           .main__post__cate__li__i
             ＃
-            = tag.title
+            = link_to edit_tag_path(tag.id), class:"main__post__cate__li__i" do
+              = tag.title
 
       .main__post__cate__edit
         = link_to new_tag_path, class: "main__post__cate__edit__i" do

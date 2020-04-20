@@ -3,6 +3,5 @@ Rails.application.routes.draw do
   root 'top#index'
 
   resources :users, only: [:edit, :update]
-  resources :tags, only: [:new, :create]
-
+  resources :tags, only: [:new, :create, :edit, :update]
 end

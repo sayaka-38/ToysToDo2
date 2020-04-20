@@ -65,8 +65,12 @@ $form-height: 100px;
         margin: 2px 0;
         &__name{
         margin-left:10px;
-        list-style: none;
         line-height: 45px;
+        &__l{
+          text-decoration: none;
+          color: #fff;
+          font-size: small;
+          }
         }
         &__img{
           margin-right:10px;
@@ -96,6 +100,7 @@ $form-height: 100px;
         color: #4d5aaf;
         margin-right: 10px;
         font-size: 15px;
+        text-decoration: none;
         }
       }
       &__edit{
