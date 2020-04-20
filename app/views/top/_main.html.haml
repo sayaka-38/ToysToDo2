@@ -11,68 +11,37 @@
       .main__post__cate__edit
         = link_to new_tag_path, class: "main__post__cate__edit__i" do
           %i.fas.fa-plus-circle
-
-    .main__post__a
-      .main__post__a__img
-        = image_tag 'test.jpg', :size =>'60x60', class: "main__post__a__img__i", alt: 'icon'
-      .main__post__a__content
-        .main__post__a__content__info
-          .main__post__a__content__info__top
-            .main__post__a__content__info__top__name
-              = current_user.name
-            .main__post__a__content__info__top__time
-              4/17(金) 11:15
-          .main__post__a__content__info__edit
-            %i.fas.fa-bars
-        .main__post__a__content__text
-          %p 本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文　本文
-          %p 仕様メモ：postの表示は上を最新に設定する
-          %p ページネイションはつけずJSでスクロールすると無限に表示されるように設定する
-        .main__post__a__content__category
-          .main__post__a__content__category__li
-            ＃日常
-          .main__post__a__content__category__li
-            ＃プログラミング
-          .main__post__a__content__category__li
-            ＃英語
-        .main__post__a__content__bottom
-          .main__post__a__content__bottom__time
-            %i.fas.fa-clock.main__post__a__content__bottom__time--e
-              ：
-            %i.fas.fa-play.main__post__a__content__bottom__time--g
-            %i.fas.fa-stop.main__post__a__content__bottom__time--r
-            %i.fas.fa-pen.main__post__a__content__bottom__time--e
-          .main__post__a__content__bottom__complete
-            完了
-
-    .main__post__a
-      .main__post__a__img
-        = image_tag 'test.jpg', :size =>'60x60', class: "main__post__a__img__i", alt: 'icon'
-      .main__post__a__content
-        .main__post__a__content__info
-          .main__post__a__content__info__top
-            .main__post__a__content__info__top__name
-              = current_user.name
-            .main__post__a__content__info__top__time
-              4/17(金) 11:10
-          .main__post__a__content__info__edit
-            %i.fas.fa-bars
-        .main__post__a__content__text
-          本文　本文　本文　本文　本文　本文　本文　本文
-        .main__post__a__content__category
-          .main__post__a__content__category__li
-            ＃遊び
-          .main__post__a__content__category__li
-            ＃読書
-        .main__post__a__content__bottom
-          .main__post__a__content__bottom__time
-            %i.fas.fa-clock.main__post__a__content__bottom__time--e
-              ：
-            %i.fas.fa-play.main__post__a__content__bottom__time--g
-            %i.fas.fa-stop.main__post__a__content__bottom__time--r
-            %i.fas.fa-pen.main__post__a__content__bottom__time--e
-          .main__post__a__content__bottom__complete
-            完了
+    - @posts.each do |post|
+      .main__post__a
+        .main__post__a__img
+          = image_tag 'test.jpg', :size =>'60x60', class: "main__post__a__img__i", alt: 'icon'
+        .main__post__a__content
+          .main__post__a__content__info
+            .main__post__a__content__info__top
+              .main__post__a__content__info__top__name
+                = post.user.name
+              .main__post__a__content__info__top__time
+                = post.created_at.to_s(:datetime_jp)
+            .main__post__a__content__info__edit
+              %i.fas.fa-bars
+          .main__post__a__content__text
+            = post.content
+          .main__post__a__content__category
+            .main__post__a__content__category__li
+              ＃日常
+            .main__post__a__content__category__li
+              ＃プログラミング
+            .main__post__a__content__category__li
+              ＃英語
+          .main__post__a__content__bottom
+            .main__post__a__content__bottom__time
+              %i.fas.fa-clock.main__post__a__content__bottom__time--e
+                ：
+              %i.fas.fa-play.main__post__a__content__bottom__time--g
+              %i.fas.fa-stop.main__post__a__content__bottom__time--r
+              %i.fas.fa-pen.main__post__a__content__bottom__time--e
+            .main__post__a__content__bottom__complete
+              完了
 
   .main__form
     .main__form__text
