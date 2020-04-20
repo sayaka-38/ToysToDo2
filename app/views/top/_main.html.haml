@@ -2,17 +2,11 @@
   .main__post
     .main__post__cate
       .main__post__cate__li
-        .main__post__cate__li__i
-          ＃日常
+        - @tags.each do |tag|
+          .main__post__cate__li__i
+            ＃
+            = tag.title
 
-        .main__post__cate__li__i
-          ＃プログラミング
-        .main__post__cate__li__i
-          ＃英語
-        .main__post__cate__li__i
-          ＃遊び
-        .main__post__cate__li__i
-          ＃読書
       .main__post__cate__edit
         = link_to new_tag_path, class: "main__post__cate__edit__i" do
           %i.fas.fa-plus-circle

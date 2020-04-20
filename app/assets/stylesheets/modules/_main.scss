@@ -83,10 +83,13 @@ $form-height: 100px;
   &__post{
     height: calc( 100% - #{$form-height} );
     &__cate{
+      width: 100%;
+      box-sizing: border-box;
       display: flex;
       justify-content: space-between;
       padding: 5px 10px;
       &__li{
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         &__i{
