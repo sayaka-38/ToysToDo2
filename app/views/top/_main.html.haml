@@ -2,19 +2,15 @@
   .main__post
     .main__post__cate
       .main__post__cate__li
-        .main__post__cate__li__i
-          ＃日常
+        - @tags.each do |tag|
+          .main__post__cate__li__i
+            ＃
+            = link_to edit_tag_path(tag.id), class:"main__post__cate__li__i" do
+              = tag.title
 
-        .main__post__cate__li__i
-          ＃プログラミング
-        .main__post__cate__li__i
-          ＃英語
-        .main__post__cate__li__i
-          ＃遊び
-        .main__post__cate__li__i
-          ＃読書
       .main__post__cate__edit
-        %i.fas.fa-plus-circle
+        = link_to new_tag_path, class: "main__post__cate__edit__i" do
+          %i.fas.fa-plus-circle
 
     .main__post__a
       .main__post__a__img
@@ -85,16 +81,10 @@
         %i.fas.fa-image
         %input{ type:"file",class:"main__form__text__image__file"}
     .main__form__cate
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        日常
-      
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        プログラミング
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        英語
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        遊び
-      %input{ type:"checkbox", class:"main__form__cate__check"}
-        読書
+      - @tags.each do |tag|
+        %input{ type:"checkbox", class:"main__form__cate__check"}
+          %span.main__form__cate__t
+            = tag.title
+
     .main__form__btn
       %input{ type:"submit", class:"main__form__btn__b" }

@@ -65,8 +65,12 @@ $form-height: 100px;
         margin: 2px 0;
         &__name{
         margin-left:10px;
-        list-style: none;
         line-height: 45px;
+        &__l{
+          text-decoration: none;
+          color: #fff;
+          font-size: small;
+          }
         }
         &__img{
           margin-right:10px;
@@ -83,20 +87,26 @@ $form-height: 100px;
   &__post{
     height: calc( 100% - #{$form-height} );
     &__cate{
+      width: 100%;
+      box-sizing: border-box;
       display: flex;
       justify-content: space-between;
       padding: 5px 10px;
       &__li{
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         &__i{
         color: #4d5aaf;
         margin-right: 10px;
         font-size: 15px;
+        text-decoration: none;
         }
       }
       &__edit{
+        &__i{
         color: #4d5aaf;
+        }
       }
     }
     &__a{
@@ -218,6 +228,9 @@ $form-height: 100px;
       padding: 0 25px;
       font-size: small;
       font-weight: bold;
+        &__t{
+        margin-right: 10px;
+        }
     }
     &__btn{
       display: flex;
