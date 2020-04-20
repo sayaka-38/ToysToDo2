@@ -1,4 +1,4 @@
-= form_with model:@post do |form|
+= form_with model:@post, local:true do |form|
   .main__form__text
     = form.text_field :content, class:"main__form__text__field__t"
     %label{ class:"main__form__text__image" }
