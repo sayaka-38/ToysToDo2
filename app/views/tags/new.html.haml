@@ -1,0 +1,3 @@
+= form_with model: @tag, class: :form, local: true do |form|
+  = form.text_field :title, placeholder: :タグ名, class: :form__tag
+  = form.submit 'タグを作る', class: :form__btn
