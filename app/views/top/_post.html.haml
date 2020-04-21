@@ -10,17 +10,15 @@
           .main__post__a__content__info__top__time
             = post.created_at.to_s(:datetime_jp)
         .main__post__a__content__info__edit
-          %i.fas.fa-bars
+          %i.fas.fa-bars.main__post__a__content__info__edit__icon
+          %i.fas.fa-trash.main__post__a__content__info__edit__icon
       .main__post__a__content__text
         = post.content
+      .main__post__a__content__text
         = image_tag post.image.url, class: 'main__post__a__content__text__image' if post.image.present?
       .main__post__a__content__category
         .main__post__a__content__category__li
-          ＃日常
-        .main__post__a__content__category__li
           ＃プログラミング
-        .main__post__a__content__category__li
-          ＃英語
       .main__post__a__content__bottom
         .main__post__a__content__bottom__time
           %i.fas.fa-clock.main__post__a__content__bottom__time--e

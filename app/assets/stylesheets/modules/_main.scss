@@ -156,13 +156,16 @@ $form-height: 100px;
             }
           &__edit{
             color: #888084;
+            &__icon{
+              margin-left: 5px;
+            }
           }
         }
         &__text{
           margin: 0 5px 10px 5px;
           color: #383c3c;
           &__image{
-            width: 100%;
+            width: 30%;
           }
         }
         &__category{
