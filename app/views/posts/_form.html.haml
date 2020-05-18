@@ -1,0 +1,13 @@
+= form_with model:@post, local:true do |form|
+  .main__form__text
+    = form.text_field :content, class:"main__form__text__field__t"
+    %label{ class:"main__form__text__image" }
+      %i.fas.fa-image
+      = form.file_field :image, class: "main__form__text__image__file"
+  .main__form__cate
+    - @tags.each do |tag|
+      %input{ type:"checkbox", class:"main__form__cate__check"}
+        %span.main__form__cate__t
+          = tag.title
+  .main__form__btn
+    = form.submit "送信", class:"main__form__btn__b"

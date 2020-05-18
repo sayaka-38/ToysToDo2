@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:edit, :update]
   resources :tags, only: [:new, :create, :edit, :update, :destroy]
+  resources :posts, only: [:create]
 end
